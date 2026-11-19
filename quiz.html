@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Time</title>
+
+    <!-- icon -->
+    <link rel="icon" href="assets/images/quiz.png">
+    <!-- remix-icon cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="fixed-img">
+        <div class="container-lg px-sm-5 px-4">
+            <div class="header-data">
+                
+                <div class="logo-design">
+                    <a href="#" class="logo-data" onclick="goLandingPage()">
+                        <img src="assets/images/logo.svg" alt="logo">
+                    </a>
+                </div>
+
+                <div class="social-icon">
+                    <button class="btn btn-light fs-5 fw-bold " type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="ri-menu-3-line"></i></button>
+
+                    <div class="offcanvas offcanvas-end px-1" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel"><img src="assets/images/logo.svg"
+                                    alt="" class="offcanvas-logo"></h5>
+                            <button type="button" class="btn-close opacity-100 fs-6 " data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+
+                            <p class="data-about">At QUITZO, we believe that creativity is the catalyst for innovation.
+                                As a
+                                full-service creative Quiz, we specialise in
+                                transforming bold ideas into compelling realities.</p>
+                            <p class="data-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                deserunt illo
+                                dicta voluptas, natus sed optio sunt consequuntur fugiat obcaecati, doloribus facilis.
+                                Amet quo
+                                veritatis suscipit rem et quaerat odit. </p>
+                            <p class="data-about">
+                                Services may include graphic design, content creation, social media management.</p>
+
+                            <div class="social-icon megu-sect">
+                                <a href="https://www.facebook.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-facebook-fill">
+
+                                    </i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-instagram-line"></i>
+
+                                    </i>
+                                </a>
+                                <a href="https://x.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-twitter-x-line"></i>
+
+                                    </i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-linkedin-fill"></i>
+
+                                    </i>
+                                </a>
+
+
+                            </div>
+                            <p class="contact-data-title">Our Contact</p>
+                            <a href="tel:+918452653320" class="contact-data">
+                                <i class="ri-phone-fill"></i>
+                                <p class="text-dark fw-bolder">(+23) 345 322 233</p>
+                            </a>
+                            <a href="" class="contact-data">
+                                <i class="ri-mail-line"></i>
+                                <p class="text-dark fw-bolder">abhishek@123</p>
+                            </a>
+                            <a href="" class="contact-data">
+                                <i class="ri-map-pin-fill"></i>
+                                <p class="text-dark fw-bolder">PO Box 16122 Collins Street Berlin Germany.</p>
+                            </a>
+                            <div class="copy-right">
+                                <p class="fw-bolder">@abhishek. All Rights Reserved by codeX</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="app">
+
+                <div class="quiz-page d-done" id="quiz-page">
+                    <div class="quiz-card">
+
+                        <!-- Header -->
+                        <div class="quiz-header">
+
+                            <div id="questionCount">
+                            </div>
+
+                            <div id="quizTitle">
+                            </div>
+
+                            <button class="quiz-close-btn">
+                                <!-- <i class="ri-close-line"></i> -->
+                            </button>
+
+                        </div>
+
+                        <!-- Attempt and Timer -->
+                        <div class="quiz-status">
+
+                            <div class="quiz-attempt">
+                                <i class="ri-checkbox-circle-line"></i>
+                                Attempt: <span id="attemptCount"></span>
+                            </div>
+
+                            <div class="quiz-timer">
+                                <i class="ri-time-line"></i>
+                                <span id="timer"></span>
+                            </div>
+
+                        </div>
+
+                        <!-- Progress -->
+                        <div class="progress-info">
+                            <span>Progress</span>
+                            <span id="progressPercent">10%</span>
+                        </div>
+
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-fill" id="progressBar">
+                            </div>
+                        </div>
+
+                        <!-- Question -->
+                        <div class="question-box">
+                            <h2 id="questionText" class="text-dark"></h2>
+                        </div>
+
+                        <!-- Options -->
+                        <div id="options" class="options">
+                            <!-- Options will come from JavaScript -->
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="quiz-navigation">
+
+                            <button id="prevBtn" class="prev-btn" disabled>
+                                <i class="ri-arrow-left-line"></i>
+                                Back
+                            </button>
+
+                            <button id="nextBtn" class="next-btn">
+                                Next <i class="ri-arrow-right-line"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Result Page -->
+                <div id="resultPage" class="result-page d-none">
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+
+                        <h2>Quiz Completed!</h2>
+
+                        <p class="result-subtitle">
+                            Here is your performance.
+                        </p>
+
+                        <div class="score-circle">
+                            <h1 id="finalScore"></h1>
+                            <span>Your Score</span>
+                        </div>
+
+
+                        <div class="result-stats">
+
+                            <div class="result-box">
+                                <span>Total Questions</span>
+                                <h3 id="resultTotal"></h3>
+                            </div>
+
+                            <div class="result-box">
+                                <span>Attempted</span>
+                                <h3 id="resultAttempt">0</h3>
+                            </div>
+
+                            <div class="result-box correct-box">
+                                <span>Correct</span>
+                                <h3 id="resultCorrect"></h3>
+                            </div>
+
+                            <div class="result-box wrong-box">
+                                <span>Wrong</span>
+                                <h3 id="resultWrong"></h3>
+                            </div>
+
+                        </div>
+
+                        <div class="result-buttons">
+
+                            <button id="viewAnswersBtn" class="view-answers-btn">
+                                View Answers <i class="ri-eye-line"></i>
+                            </button>
+
+                            <button id="restartQuizBtn" class="restart-btn">
+                                Try Again <i class="ri-refresh-line"></i>
+                            </button>
+
+                            <button id="exitQuizBtn" class="exit-btn">
+                                Exit <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <section id="answerReviewPage" class="d-none">
+
+                    <h2 class="text-white text-center">Answer Review</h2>
+                    <div id="answerReviewContent"></div>
+
+                    <button id="backToResultBtn">
+                        Back to Result
+                    </button>
+
+                </section>
+
+            </div>
+
+            <script src="assets/js/data.js"></script>
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/category.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

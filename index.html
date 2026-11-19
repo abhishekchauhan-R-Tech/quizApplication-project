@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/images/quiz.png">
+    <!-- remix-icon cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="fixed-img">
+        <div class="container-lg px-sm-5 px-4">
+            <div class="header-data">
+                <div class="logo-design">
+                    <a href="#" class="logo-data" onclick="goLandingPage()">
+                        <img src="assets/images/logo.svg" alt="logo">
+                    </a>
+                </div>
+
+                <div class="social-icon">
+                    <button class="btn btn-light fs-5 fw-bold " type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="ri-menu-3-line"></i></button>
+
+                    <div class="offcanvas offcanvas-end px-1" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel"><img src="assets/images/logo.svg" alt=""
+                                    class="offcanvas-logo"></h5>
+                            <button type="button" class="btn-close opacity-100 fs-6 " data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+
+                            <p class="data-about">At QUITZO, we believe that creativity is the catalyst for innovation.
+                                As a
+                                full-service creative Quiz, we specialise in
+                                transforming bold ideas into compelling realities.</p>
+                            <p class="data-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                deserunt illo
+                                dicta voluptas, natus sed optio sunt consequuntur fugiat obcaecati, doloribus facilis.
+                                Amet quo
+                                veritatis suscipit rem et quaerat odit. </p>
+                            <p class="data-about">
+                                Services may include graphic design, content creation, social media management.</p>
+
+                            <div class="social-icon megu-sect">
+                                <a href="https://www.facebook.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-facebook-fill">
+
+                                    </i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-instagram-line"></i>
+
+                                    </i>
+                                </a>
+                                <a href="https://x.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-twitter-x-line"></i>
+
+                                    </i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="icon-setl">
+                                    <i class="ri-linkedin-fill"></i>
+
+                                    </i>
+                                </a>
+
+
+                            </div>
+                            <p class="contact-data-title">Our Contact</p>
+                            <a href="tel:+918452653320" class="contact-data">
+                                <i class="ri-phone-fill"></i>
+                                <p class="text-dark fw-bolder">(+23) 345 322 233</p>
+                            </a>
+                            <a href="" class="contact-data">
+                                <i class="ri-mail-line"></i>
+                                <p class="text-dark fw-bolder">abhishek@123</p>
+                            </a>
+                            <a href="" class="contact-data">
+                                <i class="ri-map-pin-fill"></i>
+                                <p class="text-dark fw-bolder">PO Box 16122 Collins Street Berlin Germany.</p>
+                            </a>
+                            <div class="copy-right">
+                                <p class="fw-bolder">@abhishek. All Rights Reserved by codeX</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <main id="app">
+
+                <div class="deta-min">
+
+                    <div class="fixed-data-top">QUIZ TIME</div>
+                    <p class="fixed-desc">Let's Put Your Knowledge to The Test!</p>
+
+                </div>
+
+                <div class="main-button-data">
+                        <button class="button-top-all-design border-0" id="enter-btn">
+                            <p class="mb-1">Enter</p>
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+
+    <!-- DATA  -->
+    <script src="assets/js/data.js"></script>
+    <!-- LOGIC -->
+    <script src="assets/js/script.js"></script>
+    <!-- category -->
+     <script src="assets/js/category.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

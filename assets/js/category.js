@@ -1,7 +1,5 @@
 
 // Landing page Enter Button
-document.getElementById("enter-btn").addEventListener("click", showCategories);
-// Landing page Enter Button
 const enterBtn = document.getElementById("enter-btn");
 
 if (enterBtn) {

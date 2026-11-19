@@ -8,11 +8,6 @@ let attempt = 0;
 let rightOption = 0;
 let wrongAnswer = 0;
 
-// if (!quiz) {
-//     alert("Quiz not found!");
-//     window.location.href = "index.html";
-// }
-
 const totalQuestions = quiz.questions.length;
 let timeLeft = 120;
 let timerInterval;
@@ -262,12 +257,8 @@ document.getElementById("restartQuizBtn").addEventListener("click", function () 
     startTimer();
 });
 
-//Exit btn, result page to category page  
-// document.getElementById("exitQuizBtn").addEventListener("click", function () {
-//     showCategories();
-// });
-
-
+// Exit btn, result page to category page  
 document.getElementById("exitQuizBtn").addEventListener("click", function () {
-    window.location.href = "index.html";
+    showCategories();
 });
+
